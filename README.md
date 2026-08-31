@@ -1,36 +1,34 @@
-# SmartBranch360 — Secure Branch Office Network Design
+# SmartBranch360 — Network Design
 
 SmartBranch360 is a secure branch-office network project built in **Cisco Packet Tracer**.  
-It demonstrates VLAN segmentation, NAT overload, ACL-based guest isolation, and restricted SSH access for management.  
-The project also includes fault-injection scenarios and a Python-based checker tool for automated validation.
+It showcases how enterprise branch networks can be designed with proper segmentation, security, and troubleshooting practices.  
+The project includes VLANs, ACLs, NAT, DHCP, and restricted SSH access, along with documentation of fault scenarios and their fixes.
 
 ---
 
-## 🔑 Features
-- **VLAN Segmentation**: Employee, Guest, Server, and Management VLANs
-- **Guest Isolation**: ACL rules block Guest VLAN from accessing Server VLAN
-- **Secure Management**: SSH access restricted to Management VLAN only
+## 🔑 Key Highlights
+- **VLAN Segmentation**: Employee (10), Guest (20), Server (30), and Management (99)
+- **Guest Isolation**: ACL rules ensure Guest VLAN cannot access Server VLAN
+- **Secure Management**: SSH access restricted only to Management VLAN
 - **Internet Access**: NAT overload (PAT) configured for Employee and Guest VLANs
-- **Troubleshooting**: 5 fault scenarios injected and resolved
-- **Python Checker Tool**: Validates VLANs, NAT, DHCP, ACLs, and static IPs
+- **DHCP Pools**: Automatic IP assignment for Employee and Guest devices
+- **Troubleshooting Practice**: 5 fault scenarios injected and resolved (VLAN trunk, NAT, DHCP, ACL, gateway issues)
+- **Python Checker Tool**: Automated validation of VLANs, NAT, DHCP, ACLs, and static IPs
 
 ---
 
 ## 📂 Project Files
 - `SmartBranch360-Networking.pkt` → Cisco Packet Tracer project file  
-- `SmartBranch360_DesignDocument.docx` → Detailed design document (topology, VLAN plan, ACLs, NAT, DHCP, troubleshooting notes)  
-- `SmartBranch360_Demo_Video_Guide.docx` → Step-by-step demo recording script  
-- Screenshots → Topology and test results  
-- Optional: Demo video (`SmartBranch360_Demo.mp4`)  
+- `SmartBranch360_DesignDocument.docx` → Detailed design document (topology, VLAN/IP plan, ACLs, NAT, DHCP, troubleshooting notes)  
 
 ---
 
-## ▶️ How to Run
+## ▶️ How to Use
 1. Open `SmartBranch360-Networking.pkt` in Cisco Packet Tracer.  
-2. Test connectivity using ping and SSH commands as per the demo guide.  
-3. Inject a fault (e.g., remove VLAN 20 from trunk) and verify failure.  
-4. Run the Python checker tool (`checker.py`) to detect issues.  
-5. Apply the fix and re-test connectivity.  
+2. Review the topology and VLAN/IP plan from the design document.  
+3. Test connectivity (ping, SSH) to verify segmentation and isolation.  
+4. Explore fault scenarios and apply fixes as documented.  
+5. Optionally run the Python checker tool for automated validation.  
 
 ---
 
